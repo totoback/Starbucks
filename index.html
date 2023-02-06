@@ -4,13 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- favicon -->
+    <link rel="icon" href="./favicon.png" />
+
     <!-- css 리셋 -->
     <link
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
       rel="stylesheet"
     />
-    <!-- favicon -->
-    <link rel="icon" href="./favicon.png" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
 
     <!-- OpenGraph -->
     <meta property="og:type" content="website" />
@@ -33,11 +47,58 @@
     />
     <meta property="twitter:image" content="./images/starbucks_seo.jpg" />
     <meta property="twitter:url" content="" />
+
     <!-- stylesheet -->
     <link rel="stylesheet" href="./css/style.css" />
     <title>Starbucks</title>
   </head>
   <body>
-    <h1>Starbucks</h1>
+    <!-- Header -->
+    <header>
+      <div class="inner">
+        <a href="#" class="logo">
+          <img src="./images/logo.png" alt="Starbucks" />
+        </a>
+        <!-- sub menu -->
+        <div class="sub-menu">
+          <ul class="sub-menu__menu">
+            <li><a href="#">Sign in</a></li>
+            <li><a href="#">My Starbucks</a></li>
+            <li><a href="#">Customer Sercice & Ideas</a></li>
+            <li><a href="#">Find a Store</a></li>
+          </ul>
+          <div class="search">
+            <input type="text" placeholder="통합검색" />
+            <span class="material-symbols-outlined"> search </span>
+          </div>
+        </div>
+        <!-- main menu -->
+        <div class="main-menu">
+          <ul class="main-menu__menu">
+            <li class="item">
+              <div class="item__name">COFFEE</div>
+            </li>
+            <li class="item">
+              <div class="item__name">MENU</div>
+            </li>
+            <li class="item">
+              <div class="item__name">STORE</div>
+            </li>
+            <li class="item">
+              <div class="item__name">RESPONSIBILITY</div>
+            </li>
+            <li class="item">
+              <div class="item__name">STARBUCKS REWARDS</div>
+            </li>
+            <li class="item">
+              <div class="item__name">CORPORATE SALES</div>
+            </li>
+            <li class="item">
+              <div class="item__name">WHAT'S NEW</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
   </body>
 </html>
