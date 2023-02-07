@@ -6,6 +6,7 @@ body {
   font-weight: 400;
   line-height: 1.4;
   font-family: "Nanum Gothic", sans-serif;
+  height: 3000px;
 }
 a {
   text-decoration: none;
@@ -17,8 +18,13 @@ a {
 .inner {
   width: 1100px;
   margin: 0 auto;
-  height: 120px;
   position: relative;
+}
+.strong {
+  font-weight: 700;
+}
+header > .inner {
+  height: 120px;
 }
 /* Header */
 img {
@@ -107,13 +113,13 @@ header .inner .sub-menu .search > .material-symbols-outlined {
 header .inner .main-menu {
   position: absolute;
   right: 10px;
-  top: 58px;
+  top: 55px;
 }
 header .inner .main-menu .main-menu__menu {
   display: flex;
 }
 header .inner .main-menu .main-menu__menu .item .item__name {
-  padding: 10px 22px 34px 22px;
+  padding: 10px 22px 35px 22px;
   font-size: 13px;
   font-weight: 500;
   color: #333;
@@ -127,13 +133,336 @@ header .inner .main-menu .main-menu__menu .item .item__name:hover {
 
 header .inner .main-menu .item .item__contents {
   position: fixed;
+  width: 100%;
   top: 120px;
   left: 0;
   background-color: #2c2a29;
-  width: 100%;
-  height: 100px;
   display: none;
+  /* transform: scaleY(0);
+  transform-origin: center top;
+  transition: 0.5s; */
 }
 header .inner .main-menu .item:hover .item__contents {
   display: block;
+  /* transform: scale(1); */
+}
+header .inner .main-menu .item .item__contents .item__contents__menu {
+  color: rgb(173, 173, 173);
+  padding: 30px 0;
+}
+header .inner .main-menu .item .item__contents .item__contents__menu .inner {
+  display: flex;
+}
+header
+  .inner
+  .main-menu
+  .item
+  .item__contents
+  .item__contents__menu
+  .inner
+  > li {
+  width: 200px;
+  margin-right: 20px;
+  font-size: 14px;
+}
+header
+  .inner
+  .main-menu
+  .item
+  .item__contents
+  .item__contents__menu
+  .inner
+  > li
+  > a {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+header.inner.main-menu.item.item__contents.item__contents__menu.inner
+  > li
+  > a:hover {
+  text-decoration: underline;
+}
+header.inner.main-menu.item.item__contents.item__contents__menu.inner
+  > li
+  > ul {
+  margin-top: 12px;
+}
+header
+  .inner
+  .main-menu
+  .item
+  .item__contents
+  .item__contents__menu
+  .inner
+  > li
+  > ul
+  > li {
+  font-size: 12px;
+  color: #999;
+  padding: 3px 0;
+}
+header
+  .inner
+  .main-menu
+  .item
+  .item__contents
+  .item__contents__menu
+  .inner
+  > li
+  > ul
+  > li:hover {
+  text-decoration: underline;
+}
+
+/* badges */
+header .badges {
+  position: absolute;
+  top: 150px;
+  right: 10px;
+  /* left: calc(1100px + (100vw - 1100px / 2)); */
+  /* 이런것도있다 */
+}
+header .badges .badge {
+}
+header .badges .badge img {
+  width: 140px;
+}
+
+/* visual */
+section.visual {
+  position: relative;
+  margin-top: 120px;
+  height: 646px;
+  background-size: 106% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(/images/visual_bg.jpg);
+}
+section.visual .inner {
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+section.visual .slogan {
+  /* position: absolute;
+  flex-wrap: wrap;
+  justify-content: center; */
+  width: 340px;
+  top: 120px;
+  left: -60px;
+  text-align: center;
+}
+section.visual .slogan img {
+  margin-bottom: 50px;
+}
+section.visual .inner > img:nth-child(2) {
+  position: absolute;
+  right: 400px;
+}
+section.visual .inner > img:nth-child(3) {
+  position: absolute;
+  right: 220px;
+}
+section.visual .inner > img:nth-child(4) {
+  position: absolute;
+  right: 0px;
+}
+
+/* notice */
+section.notice {
+  position: relative;
+}
+section.notice .notice-line {
+  position: relative;
+  font-weight: 600;
+}
+section.notice .notice-line .bg-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #111111;
+}
+section.notice .notice-line .bg-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #f6f5ef;
+}
+section.notice .notice-line .inner {
+  height: 62px;
+  display: flex;
+}
+section.notice .notice-line .inner .inner__left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+  background-color: #111111;
+  color: white;
+}
+section.notice .notice-line .inner .inner__left h1 {
+  position: absolute;
+  left: 0;
+  font-size: 16px;
+}
+section.notice .notice-line .inner .inner__left div {
+  position: absolute;
+  left: 80px;
+  font-size: 14px;
+}
+section.notice .notice-line .inner .inner__left a {
+  position: absolute;
+  right: 20px;
+  color: white;
+}
+section.notice .notice-line .inner .inner__left span {
+  font-size: 36px;
+  display: block;
+}
+section.notice .notice-line .inner .inner__right {
+  background-color: #f6f5ef;
+  position: relative;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #f6f5ef;
+}
+section.notice .notice-line .inner .inner__right h1 {
+  position: absolute;
+  right: 100px;
+  font-size: 16px;
+}
+section.notice .notice-line .inner .inner__right a {
+  position: absolute;
+  right: 20px;
+  color: #000;
+}
+section.notice .notice-line .inner .inner__right span {
+  font-size: 36px;
+  display: block;
+}
+
+/* rewards */
+section.rewards {
+  position: relative;
+  background-color: #1e3932;
+}
+section.rewards .inner {
+  position: relative;
+  padding: 30px 0 40px 0;
+  display: flex;
+}
+section.rewards .inner .rewards__logo {
+  display: flex;
+  flex-basis: 260px;
+  align-items: center;
+  justify-content: center;
+}
+section.rewards .inner .rewards__logo img {
+  display: block;
+  width: 176px;
+}
+section.rewards .inner .rewards__items {
+  flex-grow: 1;
+}
+section.rewards .inner .rewards__items .rewards__items__register {
+  position: relative;
+  padding-bottom: 30px;
+  box-shadow: 0 0.5px #c8c8c8;
+}
+section.rewards .inner .rewards__items .rewards__items__register p {
+  display: block;
+  font-size: 17px;
+  color: white;
+}
+section.rewards .inner .rewards__items .rewards__items__register p.subject {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: white;
+}
+section.rewards .inner .rewards__items .rewards__items__register .buttons {
+  position: absolute;
+  right: 0;
+  bottom: 26px;
+}
+section.rewards
+  .inner
+  .rewards__items
+  .rewards__items__register
+  .buttons
+  .btn--register {
+  background-color: #076443;
+  color: white;
+  margin-right: 6px;
+  font-weight: 700;
+  border: none;
+}
+section.rewards
+  .inner
+  .rewards__items
+  .rewards__items__register
+  .buttons
+  .btn--login,
+section.rewards .inner .rewards__items .rewards__items__card .btn--login {
+  font-weight: 700;
+  border: 1px solid #fff;
+  color: white;
+}
+section.rewards .inner .rewards__items .rewards__items__card {
+  position: relative;
+}
+section.rewards .inner .rewards__items .rewards__items__card p {
+  display: block;
+  font-size: 14px;
+  color: white;
+  margin-top: 20px;
+}
+section.rewards .inner .rewards__items .rewards__items__card .btn--login {
+  position: absolute;
+  right: 0;
+  top: 12px;
+}
+
+section.rewards
+  .inner
+  .rewards__items
+  .rewards__items__register
+  .buttons
+  .btn--register:hover,
+section.rewards
+  .inner
+  .rewards__items
+  .rewards__items__register
+  .buttons
+  .btn--login:hover {
+  text-decoration: underline;
+}
+
+/* button */
+.btn {
+  display: inline-block;
+  /* width: 176px; */
+  padding: 6px 20px;
+  border: 2px solid currentColor;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 15px;
+}
+.btn--light-green {
+  color: #076443;
+  border-color: #076443;
+  transition: 0.6s;
+}
+.btn--light-green:hover {
+  background-color: #076443;
+  border-color: #000;
+  color: #fff;
+  text-decoration: underline;
 }
