@@ -7,6 +7,7 @@ body {
   line-height: 1.4;
   font-family: "Nanum Gothic", sans-serif;
   height: 3000px;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -25,6 +26,15 @@ a {
 }
 header > .inner {
   height: 120px;
+}
+/* button */
+.btn {
+  display: inline-block;
+  padding: 6px 20px;
+  border: 2px solid currentColor;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 15px;
 }
 /* Header */
 img {
@@ -178,40 +188,18 @@ header
   color: #fff;
   margin-bottom: 20px;
 }
-header.inner.main-menu.item.item__contents.item__contents__menu.inner
-  > li
-  > a:hover {
+header.inner.main-menu.item.item__contents.item__contents__menu.inner > li > a:hover {
   text-decoration: underline;
 }
-header.inner.main-menu.item.item__contents.item__contents__menu.inner
-  > li
-  > ul {
+header.inner.main-menu.item.item__contents.item__contents__menu.inner > li > ul {
   margin-top: 12px;
 }
-header
-  .inner
-  .main-menu
-  .item
-  .item__contents
-  .item__contents__menu
-  .inner
-  > li
-  > ul
-  > li {
+header .inne .main-men .ite .item__content .item__contents__men .inne > li > u > li {
   font-size: 12px;
   color: #999;
   padding: 3px 0;
 }
-header
-  .inner
-  .main-menu
-  .item
-  .item__contents
-  .item__contents__menu
-  .inner
-  > li
-  > ul
-  > li:hover {
+header .inner .main-menu .item .item__contents .item__contents__menu .inner > li > ul > li:hover {
   text-decoration: underline;
 }
 
@@ -267,6 +255,17 @@ section.visual .inner > img:nth-child(3) {
 section.visual .inner > img:nth-child(4) {
   position: absolute;
   right: 0px;
+}
+.btn--light-green {
+  color: #076443;
+  border-color: #076443;
+  transition: 0.6s;
+}
+.btn--light-green:hover {
+  background-color: #076443;
+  border-color: #000;
+  color: #fff;
+  text-decoration: underline;
 }
 
 /* notice */
@@ -329,7 +328,7 @@ section.notice .notice-line .inner .inner__right {
   background-color: #f6f5ef;
   position: relative;
   width: 40%;
-  height: 100%;
+  height: 100;
   display: flex;
   align-items: center;
   background-color: #f6f5ef;
@@ -375,7 +374,7 @@ section.rewards .inner .rewards__items {
 section.rewards .inner .rewards__items .rewards__items__register {
   position: relative;
   padding-bottom: 30px;
-  box-shadow: 0 0.5px #c8c8c8;
+  box-shadow: 0 .5008px #c8c8c8;
 }
 section.rewards .inner .rewards__items .rewards__items__register p {
   display: block;
@@ -392,24 +391,14 @@ section.rewards .inner .rewards__items .rewards__items__register .buttons {
   right: 0;
   bottom: 26px;
 }
-section.rewards
-  .inner
-  .rewards__items
-  .rewards__items__register
-  .buttons
-  .btn--register {
+section.rewards .inner .rewards__items .rewards__items__register .buttons .btn--register {
   background-color: #076443;
   color: white;
   margin-right: 6px;
   font-weight: 700;
   border: none;
 }
-section.rewards
-  .inner
-  .rewards__items
-  .rewards__items__register
-  .buttons
-  .btn--login,
+section.rewards .inner .rewards__items .rewards__items__register .buttons .btn--login,
 section.rewards .inner .rewards__items .rewards__items__card .btn--login {
   font-weight: 700;
   border: 1px solid #fff;
@@ -429,40 +418,322 @@ section.rewards .inner .rewards__items .rewards__items__card .btn--login {
   right: 0;
   top: 12px;
 }
-
-section.rewards
-  .inner
-  .rewards__items
-  .rewards__items__register
-  .buttons
-  .btn--register:hover,
-section.rewards
-  .inner
-  .rewards__items
-  .rewards__items__register
-  .buttons
-  .btn--login:hover {
+section.rewards .inner .rewards__items .rewards__items__register .buttons .btn--register:hover,
+section.rewards .inner .rewards__items .rewards__items__register .buttons .btn--login:hover {
   text-decoration: underline;
 }
 
-/* button */
-.btn {
-  display: inline-block;
-  /* width: 176px; */
-  padding: 6px 20px;
-  border: 2px solid currentColor;
-  border-radius: 5px;
-  font-weight: 500;
-  font-size: 15px;
+/* elsalvador */
+section.elsalvador {
+  position: relative;
+  height: 570px;
+  background-image: url("../images/elsalvador_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
 }
-.btn--light-green {
-  color: #076443;
-  border-color: #076443;
+section.elsalvador .inner {
+  position: relative;
+  height: 100%;
+}
+section.elsalvador .inner .elsalvador__item {
+  position: absolute;
+  width: 310px;
+  top: 70px;
+  left: 110px;
+  transform:translateX(-700px);
+  opacity: 0;
+  transition: 2.5s;
+}
+section.elsalvador .inner .elsalvador__contents {
+  position: absolute;
+  width: 339px;
+  right: 140px;
+  top: 180px; 
+  transform: translateX(900px);
+  opacity: 0;
+  transition: 2.5s;
+}
+section.elsalvador:active .inner .elsalvador__item,
+section.elsalvador:active .inner .elsalvador__contents{
+  opacity: 1;
+  transform: translateX(0);
+}
+section.elsalvador .inner .elsalvador__contents .item-text {
+
+}
+section.elsalvador .btn--brown {
+  color: #633514;
+  border-color: #633514;
   transition: 0.6s;
+  cursor: pointer;
+  margin-top: 40px;
 }
-.btn--light-green:hover {
-  background-color: #076443;
-  border-color: #000;
+section.elsalvador .btn--brown:hover {
+  background-color: #633514;
   color: #fff;
   text-decoration: underline;
+}
+
+/* ethiopia */
+section.ethiopia{
+  position: relative;
+  height: 450px;
+  background-color: #f6f5ef;
+}
+section.ethiopia .inner{
+  height: 100%;
+}
+section.ethiopia::before{
+  content: '';
+  width: 425px;
+  height: 100%;
+  position: absolute;
+  left: -50px;
+  bottom: 0;
+  /* 자동으로 디스플레이 블럭으로 바뀜 */
+  background-image: url(../images/ethiopia_before.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+section.ethiopia::after{
+  content: '';
+  width: 361px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-image: url(../images/ethiopia_after.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+section.ethiopia:active::before,
+section.ethiopia:active::after{
+  transition: 1.5s;
+  opacity: 1;
+}
+section.ethiopia .inner .ethiopia__contents{
+  position: absolute;
+  width: 496px;
+  left: 0;
+  top: 120px;
+}
+section.ethiopia .inner .ethiopia__item{
+  position: absolute;
+  top: 0;
+  left: -500px;
+  z-index: 1;
+  opacity: 0;
+}
+section.ethiopia .inner .ethiopia__item:active{
+  opacity: 1;
+  transition: 1.5s;
+  transition-delay: 0.8s;
+}
+section.ethiopia .btn.btn--gold{
+  position: absolute;
+  left: 260px;
+  top: 270px;
+  border-color: #966936;
+  color: #966936;
+  transition: .6s;
+  cursor: pointer;
+}
+section.ethiopia .btn.btn--gold:hover{
+  background-color: #966936;
+  color: white;
+  text-decoration: underline;
+}
+
+/* favorite */
+section.favorite{
+  position: relative;
+  height: 800px;
+  background: url(../images/fav_bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+section.favorite .fav_text1{
+  position: absolute;
+  top: 150px;
+  left: 30px;
+  width: 258px;
+  margin-bottom: 30px;
+  margin-left: 75px;
+  transform: translateX(-700px);
+  opacity: 0;
+  transition: 2s;
+}
+section.favorite .fav_text2{
+  position: absolute;
+  left: 0;
+  top: 400px;
+  width: 362px;
+  transform: translateX(-700px);
+  opacity: 0;
+  transition: 2.5s;
+  
+}
+section.favorite:active .fav_text1,
+section.favorite:active .fav_text2{
+  opacity: 1;
+  transform: translateX(0);
+}
+section.favorite .fav_img{
+  width: 913px;
+  position: absolute;
+  right: -240px;
+  top: 170px;
+}
+section.favorite .btn.btn--white{
+  position: absolute;
+  top: 600px;
+  left: 240px;
+  border: 2px solid white;
+  color: white;
+  transition: .6s;
+  cursor: pointer;
+}
+section.favorite .btn.btn--white:hover{
+  background-color: white;
+  color: #000;
+  text-decoration: underline;
+}
+
+/* magazine */
+section.magazine{
+  position: relative;
+  height: 400px;
+  background-image: url(../images/magazine_bg.png);
+  background-size: cover;
+  background-position: center 50px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+section.magazine .inner .magazine_text{
+  position: absolute;
+  top: 135px;
+  left: 30px;
+}
+section.magazine .inner .magazine_img{
+  position: absolute;
+  right: 90px;
+  opacity: 0;
+  transition: 1.5s;
+}
+section.magazine:active .inner .magazine_img{
+  opacity: 1;
+}
+section.magazine .inner .btn.btn--black{
+  position: absolute;
+  top: 270px;
+  left: 348px;
+  color: black;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: 0.6s;
+}
+section.magazine .inner .btn.btn--black:hover{
+  background-color: black;
+  color: white;
+  text-decoration: underline;
+}
+
+/* store */
+.store{
+  position: relative;
+  height: 400px;
+  background-image: url(../images/store_bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.store .inner{
+  height: 400px;
+}
+.store .store_img1{
+  position: absolute;
+  width: 366px;
+  top: 0;
+  left: 70px;
+  opacity: 0;
+  transition: 1.5s;
+}
+.store .store_img2{
+  position: absolute;
+  width: 228px;
+  top: 150px;
+  left: 300px;
+  opacity: 0;
+  transition: 1.5s;
+}
+.store .store_img3{
+  position: absolute;
+  width: 348px;
+  top: -60px;
+  left: 430px;
+  opacity: 0;
+  transition: 1.5s;
+}
+.store .store_img4{
+  position: absolute;
+  width: 230px;
+  right: -70px;
+  bottom: 0;
+  opacity: 0;
+  transition: 1.5s;
+}
+.store:active .store_img1,
+.store:active .store_img2,
+.store:active .store_img3,
+.store:active .store_img4{
+  opacity: 1;
+}
+.store .store_text1{
+  position: absolute;
+  width: 385px;
+  top: 100px;
+  right: 50px;
+  transform: translateX(800px);
+  opacity: 0;
+  transition: 2s;
+}
+.store .store_text2{
+  position: absolute;
+  width: 366px;
+  top: 170px;
+  right: 69px;
+  transform: translateX(800px);
+  opacity: 0;
+  transition: 2.5s;
+}
+.store:active .store_text1,
+.store:active .store_text2{
+  transform: translateX(0);
+  opacity: 1;
+}
+.store:active .btn.btn--black{
+  transition: transform 3s, background-color 0.6s, color 0.6s;
+  transform: translateX(0);
+  opacity: 1;
+}
+.store .btn.btn--black{
+  position: absolute;
+  top: 290px;
+  right: 330px;
+  color: black;
+  border: 2px solid black;
+  transition: 0.6s;
+  cursor: pointer;
+  transform: translateX(800px);
+  opacity: 0;
+}
+.store .btn.btn--black:hover{
+  background-color: black;
+  color: white;
 }
