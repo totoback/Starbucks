@@ -737,3 +737,92 @@ section.magazine .inner .btn.btn--black:hover{
   background-color: black;
   color: white;
 }
+
+/* footer */
+footer{
+  position: relative;
+  background-color: #2c2a29;
+  padding: 32px 0 35px 0;
+}
+footer .inner{}
+
+/* footer menu */
+footer .inner .footer__menu{
+  display: flex;
+}
+footer .inner .footer__menu .left{
+  width: 90%;
+}
+footer .inner .footer__menu .left .menu{
+  display: flex;
+  color: white;
+}
+footer .inner .footer__menu .left .menu a{
+  font-size: 14px;
+  color: white;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+footer .inner .footer__menu .left .menu a:hover,
+footer .inner .footer__menu .left .menu > li > ul > li:hover{
+  text-decoration: underline;
+}
+footer .inner .footer__menu .left .menu > li{
+  width: 20%;
+}
+footer .inner .footer__menu .left .menu > li > ul > li{
+  font-size: 12px;
+  margin: 6px 0;
+}
+footer .inner .footer__menu .right{
+  width: 10%;
+}
+footer .inner .footer__menu .right img{
+  float: right;
+}
+/* footer__sub-menu */
+footer .footer__sub-menu ul{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+footer .footer__sub-menu li:nth-child(1) a{
+  color: #00b050;
+}
+footer .footer__sub-menu li{
+  font-size: 12px;
+  margin:0 6px;
+  color: white;
+}
+footer .footer__sub-menu li:hover{
+  text-decoration: underline;
+}
+footer .footer__sub-menu li a {
+  color: #ccc;
+}
+
+/* footer__btn */
+footer .footer__btn{
+  display: flex;
+  justify-content: center;
+}
+footer .footer__btn .btn{
+  margin: 0 5px;
+  color: white;
+  border-color:white;
+  font-size: 12px;
+}
+footer .footer__btn .btn:hover{
+  background-color: transparent;
+  text-decoration:underline;
+  color: white;
+}
+
+/* footer__copy */
+footer .inner .footer__copy{
+  display: flex;
+  justify-content: center;
+  color: #999;
+  font-size: 12px;
+  margin: 20px;
+}
